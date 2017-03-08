@@ -8,8 +8,6 @@ WORKDIR /usr/src/app
 
 RUN npm install n -g && n stable
 
-RUN npm install
+RUN npm install -g
 
-EXPOSE 8080
-
-CMD ./gotty -w --title-format "Scores-CLI Online" bash
+CMD ./gotty -p $PORT -w --title-format "Scores-CLI Online" bash
